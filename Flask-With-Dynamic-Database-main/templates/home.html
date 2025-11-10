@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>X Careers</title>
+    <style>
+        #banner {
+            height: 360px !important;
+            width: 100%;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="../static/banner.png" height="320" alt="rr">
+    <div class="container">
+        <h1 class=" text-center mt-2 mb-4">{{ company_name }} Careers</h1>
+
+        <div class="row" style="margin-bottom: 16px">
+            <div class="col-md-6">
+        <p class="lead text-center">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+            </div>
+            <div class=" col-md-6">
+            <img src="/static/people.png" style="height: 320px; border-radius: 4px" alt="people">
+            </div>
+        </div>
+
+        <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+        <div>
+            {% for job in jobs %}
+               {% include 'jobitem.html' %}
+            {% endfor %}
+        </div>
+        <div class="text-center">
+            <a href="mailto:mmaharaj880@gmail.com?subject=Question%20about%20job%20openings%20&body=My%20Name%20%3A%20%3CEnter%20Name%20Here%3E%0D%0AMy%20Resume%20Question%20%3A%20%3CEnter%20Your%20Question%20here%3E"
+               class="btn btn-primary btn-lg">Contact Us</a>
+
+        </div>
+    </div>
+    {% include 'footer.html' %}
+</body>
+</body>
+</html>
